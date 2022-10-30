@@ -1,0 +1,187 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Proveedor Page";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+
+        <!--Inicio tarjeta-->
+
+        <div class="card">
+            <div class="card-header">Proveedor</div>
+            <div class="card-body">
+
+                <button class="btn btn-success" id="btnNuevo">Nuevo Proveedor</button>
+
+                <hr />
+
+                <table class="table table-striped" id="tbProveedor">
+                    <thead>
+                        <tr>
+                            <th>Codigo Proveedor</th>
+                            <th>Descripcion Proveedor</th>
+                            <th>Telefono Proveedor</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        <!--Fin tarjeta-->
+
+    </div>
+</div>
+
+
+<!-- Inicio Modal --> 
+
+<div class="modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Detalle Proveedor</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="txtCodigoProveedor" value="0" />
+                <div class="mb-2">
+                    <label>Descripcion Proveedor</label>
+                    <input type="text" class="form-control" id="txtDescipcionProveedor" />
+                </div>
+                <div class="mb-2">
+                    <label>Telefono Proveedor</label>
+                    <input type="text" class="form-control" id="txtTelefonoProveedor" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="btnGuardar">Guardar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Fin Modal-->
+
+@section Scripts
+{ 
+    <script>
+
+
+        const Modelo_base = {
+            codigoProveedor: 0,
+            descripcionProveedor: "",
+            telefonoProveedor: "",
+        }
+
+        $(document).ready(() =>{
+            listaProveedor();
+        })
+
+        function mostrarModal(modelo) {
+
+            $("#txtCodigoProveedor").val(modelo.codigoProveedor);
+            $("#txtDescipcionProveedor").val(modelo.descripcionProveedor);
+            $("#txtTelefonoProveedor").val(modelo.telefonoProveedor);
+
+            $('.modal').modal('show');
+        }
+
+        $("#btnNuevo").click(() => {
+
+            mostrarModal(Modelo_base);
+        })
+
+        $("#btnGuardar").click(() => {
+
+            let NuevoModelo = Modelo_base;
+
+            NuevoModelo["codigoProveedor"] = $("#txtCodigoProveedor").val();
+            NuevoModelo["descripcionProveedor"] = $("#txtDescipcionProveedor").val();
+            NuevoModelo["telefonoProveedor"] = $("#txtTelefonoProveedor").val();
+
+            if($("#txtCodigoProveedor").val() == "0"){
+
+                fetch("Proveedor/Insertar", {
+                    method: "POST",
+                    headers: {
+                        'Content-Type':'application/json;charset=utf-8'
+                    },
+                    body: JSON.stringify( NuevoModelo)
+                    
+                })
+                .then((response) => {
+
+                    return response.ok ? response.json() : Promise.reject(response)
+                })
+                .then ((dataJson) => {
+                    if(dataJson.valor){
+                        alert("Registrado");
+                        $('.modal').modal('hide');
+                        listaProveedor();
+                    }
+                })
+            }else{
+                fetch("Proveedor/Actualizar", {
+                    method: "PUT",
+                    headers: {
+                        'Content-Type':'application/json;charset=utf-8'
+                    },
+                    body: JSON.stringify( NuevoModelo)
+                    
+                })
+                .then((response) => {
+
+                    return response.ok ? response.json() : Promise.reject(response)
+                })
+                .then ((dataJson) => {
+
+                    if(dataJson.valor){
+                        alert("Editado");
+                        $('.modal').modal('hide');
+                        listaProveedor();
+                    }
+                })
+            }
+
+        })
+
+        function listaProveedor(){
+            fetch("Proveedor/Lista")
+                .then((response) => {
+                    return response.ok ? response.json() : Promise.reject(response)
+                })
+                .then ((dataJson) => {
+
+                    $("#tbProveedor tbody").html("");
+
+                    dataJson.forEach((item) => {
+                        $("#tbProveedor tbody").append(
+                            $("<tr>").append(
+                                $("<td>").text(item.codigoProveedor),
+                                $("<td>").text(item.descripcionProveedor),
+                                $("<td>").text(item.telefonoProveedor),
+                                $("<td>").append(
+                                    $("<button>").addClass("btn btn-primary btn-sm me-2 btn-editar").data("modelo",item).text("Editar"),
+                                    $("<button>").addClass("btn btn-danger btn-sm btn-eliminar").data("id",item).text("Eliminar")
+                                )
+                            )
+                        )
+                    })
+             })
+        }
+
+        $("#tbProveedor tbody").on("click",".btn-editar", function(){ 
+            let Proveedor = $(this).data("modelo")
+            mostrarModal(Proveedor)
+        })
+
+    </script>
+
+}

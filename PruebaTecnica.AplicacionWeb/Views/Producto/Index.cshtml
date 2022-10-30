@@ -1,0 +1,290 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Product Page";
+}
+
+<div class="row">
+    <div class="col-sm-12">
+
+        <!--Inicio tarjeta-->
+
+        <div class="card">
+            <div class="card-header">Productos</div>
+            <div class="card-body">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+
+                <hr />
+
+                <button class="btn btn-success" id="btnNuevo">Nuevo Producto</button>
+                
+
+                <hr />
+
+                <table class="table table-striped" id="tbProducto">
+                    <thead>
+                        <tr>
+                            <th>Codigo Producto</th>
+                            <th>Descripcion Producto</th>
+                            <th>Estado Producto</th>
+                            <th>Fecha Fabricacion</th>
+                            <th>Fecha Validez</th>
+                            <th>Codigo Proveedor</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        <!--Fin tarjeta-->
+
+    </div>
+</div>
+
+
+<!-- Inicio Modal --> 
+
+<div class="modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Detalle Producto</h5>
+                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="txtCodigoProducto" value="0" />
+                <div class="mb-2">
+                    <label>Descripcion Producto</label>
+                    <input type="text" class="form-control" id="txtDescipcionProducto" />
+                </div>
+                <div class="mb-2">
+                    <label>Estado Producto</label>
+                    <select class="form-select" id="txtEstadoProducto" required>
+                      <option selected disabled value="">Seleccione un estado</option>
+                      <option>Activo</option>
+                      <option>Inactivo</option>
+                    </select>
+                </div>
+                <div class="mb-2">
+                    <label>Fecha Fabricacion</label>
+                    <input type="text" class="form-control" id="txtFechaFabricacion" />
+                </div>
+                <div class="mb-2">
+                    <label>Fecha Validez</label>
+                    <input type="text" class="form-control" id="txtFechaValidez" />
+                </div>
+                <div class="mb-2">
+                    <label>Codigo Proveedor</label>
+                    <input type="text" class="form-control" id="txtcodigoProveedorID" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="btnGuardar">Guardar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Close">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Fin Modal-->
+
+@section Scripts
+{ 
+    <script>
+
+
+        const Modelo_base = {
+            codigoProducto: 0,
+            descripcionProducto: "",
+            estadoProducto: "",
+            fechaFabricacion: "",
+            fechaValidez: "",
+            codigoProveedorId: ""
+        }
+
+        $(document).ready(() =>{
+            listaProductos();
+        })
+
+        function mostrarModal(modelo) {
+
+            $("#txtCodigoProducto").val(modelo.codigoProducto);
+            $("#txtDescipcionProducto").val(modelo.descripcionProducto);
+            $("#txtEstadoProducto").val(modelo.estadoProducto);
+            $("#txtFechaFabricacion").val(modelo.fechaFabricacion);
+            $("#txtFechaValidez").val(modelo.fechaValidez);
+            $("#txtcodigoProveedorID").val(modelo.codigoProveedorId);
+
+            $('.modal').modal('show');
+        }
+
+        $("#btnNuevo").click(() => {
+
+            mostrarModal(Modelo_base);
+        })
+
+        $("#btnGuardar").click(() => {
+
+            let NuevoModelo = Modelo_base;
+
+            if( $("#txtFechaFabricacion").val() < $("#txtFechaValidez").val()){
+
+            NuevoModelo["codigoProducto"] = $("#txtCodigoProducto").val();
+            NuevoModelo["descripcionProducto"] = $("#txtDescipcionProducto").val();
+            NuevoModelo["estadoProducto"] = $("#txtEstadoProducto").val();
+            NuevoModelo["fechaFabricacion"] = $("#txtFechaFabricacion").val();
+            NuevoModelo["fechaValidez"] = $("#txtFechaValidez").val();
+            NuevoModelo["codigoProveedorId"] = $("#txtcodigoProveedorID").val();
+
+            if($("#txtCodigoProducto").val() == "0"){
+
+                    fetch("Producto/Insertar", {
+                        method: "POST",
+                        headers: {
+                            'Content-Type':'application/json;charset=utf-8'
+                        },
+                        body: JSON.stringify( NuevoModelo)
+                    
+                    })
+                    .then((response) => {
+
+                        return response.ok ? response.json() : Promise.reject(response)
+                    })
+                    .then ((dataJson) => {
+                        if(dataJson.valor){
+                            alert("Registrado");
+                            $('.modal').modal('hide');
+                            listaProductos();
+                        }
+                    })
+                }else{
+                    if($("#txtFechaFabricacion").val() < $("#txtFechaValidez").val()){
+                    fetch("Producto/Actualizar", {
+                        method: "PUT",
+                        headers: {
+                            'Content-Type':'application/json;charset=utf-8'
+                        },
+                        body: JSON.stringify( NuevoModelo)
+                    
+                    })
+                    .then((response) => {
+
+                        return response.ok ? response.json() : Promise.reject(response)
+                    })
+                    .then ((dataJson) => {
+
+                        if(dataJson.valor){
+                            alert("Editado");
+                            $('.modal').modal('hide');
+                            listaProductos();
+                        }
+                    })
+                    }else{
+                        alert("La fecha de fabricacion no debe ser mayor o igual a la fecha de vencimiento");
+                    }
+                }
+            }else{
+                alert("La fecha de fabricacion no debe ser mayor o igual a la fecha de vencimiento");
+            }
+
+        })
+
+        function listaProductos(){
+            fetch("Producto/Lista")
+                .then((response) => {
+                    return response.ok ? response.json() : Promise.reject(response)
+                })
+                .then ((dataJson) => {
+                    console.log(dataJson)
+                    $("#tbProducto tbody").html("");
+
+                    dataJson.forEach((item) => {
+                        $("#tbProducto tbody").append(
+                            $("<tr>").append(
+                                $("<td>").text(item.codigoProducto),
+                                $("<td>").text(item.descripcionProducto),
+                                $("<td>").text(item.estadoProducto),
+                                $("<td>").text(item.fechaFabricacion),
+                                $("<td>").text(item.fechaValidez),
+                                $("<td>").text(item.codigoProveedorId),
+                                $("<td>").append(
+                                    $("<button>").addClass("btn btn-primary btn-sm me-2 btn-editar").data("modelo",item).text("Editar"),
+                                    $("<button>").addClass("btn btn-danger btn-sm btn-eliminar").data("modelo",item).text("Eliminar")
+                                )
+                            )
+                        )
+                    })
+             })
+        }
+
+        $("#tbProducto tbody").on("click",".btn-editar", function(){ 
+            let producto = $(this).data("modelo")
+            mostrarModal(producto)
+            
+        })
+
+        $("#tbProducto tbody").on("click",".btn-eliminar", function(){
+            let modelo = Modelo_base;
+            let producto = $(this).data("modelo")
+            modelo = producto;
+            
+                    fetch("Producto/Eliminar", {
+                        method: "PUT",
+                        headers: {
+                            'Content-Type':'application/json;charset=utf-8'
+                        },
+                        body: JSON.stringify( producto)
+                    
+                    })
+                    .then((response) => {
+                        console.log(response)
+                        return response.ok ? response.json() : Promise.reject(response)
+                    })
+                    .then ((dataJson) => {
+
+                        if(dataJson.valor){
+                            alert("Eliminado");
+                            $('.modal').modal('hide');
+                            listaProductos();
+                        }
+                    })
+
+        })
+
+
+        //$("#tbProducto tbody").on("click",".btn-eliminar", function(){
+
+        //    let producto = $(this).data("modelo")
+
+        //    producto["codigoProducto"] = $("#txtCodigoProducto").val();
+        //    producto["descripcionProducto"] = $("#txtDescipcionProducto").val();
+        //    producto["estadoProducto"] = $("#txtEstadoProducto").val();
+        //    producto["fechaFabricacion"] = $("#txtFechaFabricacion").val();
+        //    producto["fechaValidez"] = $("#txtFechaValidez").val();
+        //    producto["codigoProveedorId"] = $("#txtcodigoProveedorID").val();
+
+        //    console.log(producto)
+
+        //            fetch("Producto/Eliminar")
+        //            .then((response) => {
+        //                console.log(response)
+        //                return response.ok ? response.json() : Promise.reject(response)
+        //            })
+        //            .then ((dataJson) => {
+        //                if(dataJson.valor){
+        //                    alert("Eliminado");
+        //                    listaProductos();
+        //                }
+        //            })
+        //})
+
+    </script>
+
+}

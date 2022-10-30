@@ -1,0 +1,36 @@
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\bin\Debug\net5.0\PruebaTecnica.DAL.deps.json
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\bin\Debug\net5.0\PruebaTecnica.DAL.dll
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\bin\Debug\net5.0\ref\PruebaTecnica.DAL.dll
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\bin\Debug\net5.0\PruebaTecnica.DAL.pdb
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\obj\Debug\net5.0\PruebaTecnica.DAL.csproj.AssemblyReference.cache
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\obj\Debug\net5.0\PruebaTecnica.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\obj\Debug\net5.0\PruebaTecnica.DAL.AssemblyInfoInputs.cache
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\obj\Debug\net5.0\PruebaTecnica.DAL.AssemblyInfo.cs
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\obj\Debug\net5.0\PruebaTecnica.DAL.csproj.CoreCompileInputs.cache
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\obj\Debug\net5.0\PruebaTecnica.DAL.dll
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\obj\Debug\net5.0\ref\PruebaTecnica.DAL.dll
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\obj\Debug\net5.0\PruebaTecnica.DAL.pdb
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\bin\Debug\net5.0\PruebaTecnica.DAL.runtimeconfig.json
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\bin\Debug\net5.0\PruebaTecnica.DAL.runtimeconfig.dev.json
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\obj\Debug\net5.0\PruebaTecnica.DAL.genruntimeconfig.cache
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\bin\Debug\net5.0\PruebaTecnica.Models.dll
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\bin\Debug\net5.0\PruebaTecnica.Models.pdb
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\obj\Debug\net5.0\PruebaTecnica.DAL.csproj.CopyComplete
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\bin\Debug\net5.0\PruebaTecnica.DAL.deps.json
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\bin\Debug\net5.0\PruebaTecnica.DAL.runtimeconfig.json
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\bin\Debug\net5.0\PruebaTecnica.DAL.runtimeconfig.dev.json
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\bin\Debug\net5.0\PruebaTecnica.DAL.dll
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\bin\Debug\net5.0\PruebaTecnica.DAL.pdb
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\bin\Debug\net5.0\PruebaTecnica.Models.dll
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\bin\Debug\net5.0\PruebaTecnica.Models.pdb
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\obj\Debug\net5.0\PruebaTecnica.DAL.csproj.AssemblyReference.cache
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\obj\Debug\net5.0\PruebaTecnica.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\obj\Debug\net5.0\PruebaTecnica.DAL.AssemblyInfoInputs.cache
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\obj\Debug\net5.0\PruebaTecnica.DAL.AssemblyInfo.cs
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\obj\Debug\net5.0\PruebaTecnica.DAL.csproj.CoreCompileInputs.cache
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\obj\Debug\net5.0\PruebaTecnica.DAL.csproj.CopyComplete
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\obj\Debug\net5.0\PruebaTecnica.DAL.dll
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\obj\Debug\net5.0\refint\PruebaTecnica.DAL.dll
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\obj\Debug\net5.0\PruebaTecnica.DAL.pdb
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\obj\Debug\net5.0\PruebaTecnica.DAL.genruntimeconfig.cache
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.DAL\obj\Debug\net5.0\ref\PruebaTecnica.DAL.dll

@@ -1,0 +1,24 @@
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.Models\bin\Debug\net5.0\PruebaTecnica.Models.deps.json
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.Models\bin\Debug\net5.0\PruebaTecnica.Models.dll
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.Models\bin\Debug\net5.0\ref\PruebaTecnica.Models.dll
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.Models\bin\Debug\net5.0\PruebaTecnica.Models.pdb
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.Models\obj\Debug\net5.0\PruebaTecnica.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.Models\obj\Debug\net5.0\PruebaTecnica.Models.AssemblyInfoInputs.cache
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.Models\obj\Debug\net5.0\PruebaTecnica.Models.AssemblyInfo.cs
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.Models\obj\Debug\net5.0\PruebaTecnica.Models.csproj.CoreCompileInputs.cache
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.Models\obj\Debug\net5.0\PruebaTecnica.Models.dll
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.Models\obj\Debug\net5.0\ref\PruebaTecnica.Models.dll
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.Models\obj\Debug\net5.0\PruebaTecnica.Models.pdb
+C:\Users\mbolanos\Documents\Nueva carpeta (3)\Nueva carpeta\PruebaTecnica\PruebaTecnica.Models\obj\Debug\net5.0\PruebaTecnica.Models.csproj.AssemblyReference.cache
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.Models\bin\Debug\net5.0\PruebaTecnica.Models.deps.json
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.Models\bin\Debug\net5.0\PruebaTecnica.Models.dll
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.Models\bin\Debug\net5.0\PruebaTecnica.Models.pdb
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.Models\obj\Debug\net5.0\PruebaTecnica.Models.csproj.AssemblyReference.cache
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.Models\obj\Debug\net5.0\PruebaTecnica.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.Models\obj\Debug\net5.0\PruebaTecnica.Models.AssemblyInfoInputs.cache
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.Models\obj\Debug\net5.0\PruebaTecnica.Models.AssemblyInfo.cs
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.Models\obj\Debug\net5.0\PruebaTecnica.Models.csproj.CoreCompileInputs.cache
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.Models\obj\Debug\net5.0\PruebaTecnica.Models.dll
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.Models\obj\Debug\net5.0\refint\PruebaTecnica.Models.dll
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.Models\obj\Debug\net5.0\PruebaTecnica.Models.pdb
+C:\Users\milto\Documents\prueba tecnica\Nueva carpeta\PruebaTecnica\PruebaTecnica.Models\obj\Debug\net5.0\ref\PruebaTecnica.Models.dll
